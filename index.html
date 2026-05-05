@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syncope — Ensemble Management</title>
+
+  <!-- Elegant serif fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --primary: #3e3a34;
+      --accent: #8b6f47;
+      --text: #2c2a28;
+      --muted: #6b665f;
+      --card: #ffffff;
+      --border: #e5dfd6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "EB Garamond", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+
+      /* subtle paper texture */
+      background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 6px 6px;
+    }
+
+    header {
+      text-align: center;
+      padding: 5rem 1.5rem 3rem;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+
+    .logo {
+      margin-bottom: 1rem;
+    }
+
+    .logo svg {
+      width: 70px;
+      height: auto;
+      color: var(--accent);
+    }
+
+    /* decorative lines */
+    header::before,
+    header::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--accent);
+      margin: 1rem auto;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-family: "Inter", sans-serif;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.6rem 1.3rem;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .cta:hover {
+      background: var(--primary);
+      color: var(--bg);
+    }
+
+    .cta.secondary {
+      border-color: var(--accent);
+      color: var(--accent);
+      margin-left: 1rem;
+    }
+
+    .cta.secondary:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    /* ornamental divider */
+    .divider {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .divider svg {
+      width: 120px;
+      height: 20px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.4rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      font-family: "Inter", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      position: relative;
+    }
+
+    footer::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 1px;
+      background: var(--accent);
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+<div class="logo">
+  <svg viewBox="0 0 120 90">
+    <!-- Eighth note (stem up) -->
+    <circle cx="35" cy="50" r="8" fill="currentColor"/>
+    <line x1="43" y1="50" x2="43" y2="15" stroke="currentColor" stroke-width="2"/>
+    <path d="M43 15 Q60 20 55 35" fill="currentColor"/>
+
+    <!-- Quarter note (stem down) -->
+    <circle cx="65" cy="45" r="8" fill="currentColor"/>
+    <line x1="57" y1="45" x2="57" y2="85" stroke="currentColor" stroke-width="2"/>
+  </svg>
+</div>
+    <h1>Syncope</h1>
+    <p>Run your ensemble without the chaos—rehearsals, scores, attendance, payments, and decisions in one place.</p>
+    <a href="#" class="cta">Get Started</a>
+    <a href="#" class="cta secondary">View on GitHub</a>
+  </header>
+
+  <div class="divider">
+    <svg viewBox="0 0 120 20">
+      <path d="M5 10 H40 M80 10 H115 M40 10 Q60 2 80 10 Q60 18 40 10" />
+    </svg>
+  </div>
+
+  <section>
+    <div class="features">
+      <div class="card">
+        <h3>Rehearsal Planning</h3>
+        <p>Schedule rehearsals and keep your ensemble aligned.</p>
+      </div>
+      <div class="card">
+        <h3>Score Library</h3>
+        <p>Organize and share sheet music effortlessly.</p>
+      </div>
+      <div class="card">
+        <h3>Attendance Tracking</h3>
+        <p>Understand participation at a glance.</p>
+      </div>
+      <div class="card">
+        <h3>Membership Payments</h3>
+        <p>Keep finances simple and transparent.</p>
+      </div>
+      <div class="card">
+        <h3>Voting & Decisions</h3>
+        <p>Let your ensemble shape its direction.</p>
+      </div>
+      <div class="card">
+        <h3>Concert Management</h3>
+        <p>Plan performances with clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <svg viewBox="0 0 120 20">
+      <path d="M5 10 H40 M80 10 H115 M40 10 Q60 2 80 10 Q60 18 40 10" />
+    </svg>
+  </div>
+
+  <section>
+    <h2>Open Source & Built for Musicians</h2>
+    <p style="text-align:center; font-family: Inter, sans-serif; color: var(--muted); max-width: 600px; margin: auto;">
+      Syncope is a free, open-source platform designed for ensembles of all sizes—simple, elegant, and focused on what matters: the music.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Syncope • syncope.music</p>
+  </footer>
+
+</body>
+</html>
